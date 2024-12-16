@@ -1,5 +1,5 @@
 # download_upload
-To automate the process of downloading a file file daily and uploading it to an FTP server on a Linux system
+To automate the process of downloading a any file daily and uploading it to an FTP server on a Linux system
 
 
 Here are the step-by-step instructions to install, set permissions, schedule the script in crontab, and manually run it:
