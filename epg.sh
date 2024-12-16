@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Constants
-DOWNLOAD_URL="http://tv.youriptv.xyz/xmltv.php?username=A051611&password=DJ1C4NC"
-LOCAL_FILE="/tmp/EPG.xml"
-FTP_SERVER="ftp.kdowns.xyz"
-FTP_USER="xml@youriptv.xyz"
-FTP_PASSWORD="Alex51611"
+DOWNLOAD_URL="http://example.com/path_to_file"
+LOCAL_FILE="/tmp/example.file"
+FTP_SERVER="ftp.example.com"
+FTP_USER="exampleuser@example.com"
+FTP_PASSWORD="examplepassword"
 REMOTE_DIRECTORY="/"
 LOG_FILE="/tmp/epg_log.txt"
 
@@ -19,7 +19,7 @@ echo "--------------------------------------------------------------------------
 log "Starting the script."
 
 # Download the XML file
-log "Downloading EPG from $DOWNLOAD_URL"
+log "Starting the download from $DOWNLOAD_URL"
 wget -O "$LOCAL_FILE" "$DOWNLOAD_URL"
 
 # Check if the file was downloaded successfully
