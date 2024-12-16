@@ -7,12 +7,13 @@ Here are the step-by-step instructions to install, set permissions, schedule the
 ---
 
 ### **1. Save the Script**
-Save the script as `~/epg.sh`:
+Save the script as `~/dowload_upload.sh`:
 1. Open a terminal and run:
    ```bash
-   nano ~/epg.sh
+   nano ~/dowload_upload.sh
    ```
 2. Paste the script content into the editor.
+```bash
 #!/bin/bash
 
 # Constants
@@ -22,7 +23,7 @@ FTP_SERVER="ftp.example.com"
 FTP_USER="exampleuser@example.com"
 FTP_PASSWORD="examplepassword"
 REMOTE_DIRECTORY="/"
-LOG_FILE="/tmp/epg_log.txt"
+LOG_FILE="/tmp/~/dowload_upload_log.txt"
 
 # Function to log messages with timestamp
 log() {
@@ -65,7 +66,7 @@ else
     log "File download failed."
     log "Script failed."
 fi
-
+```
 3. Save and exit by pressing `CTRL + O`, then `ENTER`, and `CTRL + X`.
 
 ---
@@ -73,7 +74,7 @@ fi
 ### **2. Set Permissions**
 Make the script executable:
 ```bash
-chmod +x ~/epg.sh
+chmod +x ~/dowload_upload.sh
 ```
 
 ---
@@ -81,7 +82,7 @@ chmod +x ~/epg.sh
 ### **3. Test the Script**
 To manually run the script, use:
 ```bash
-~/epg.sh
+~/dowload_upload.sh
 ```
 
 ---
@@ -93,7 +94,7 @@ To manually run the script, use:
    ```
 2. Add the following line to schedule the script to run at 12:00 AM, 6:00 AM, 12:00 PM, and 6:00 PM:
    ```bash
-   0 0,6,12,18 * * * ~/epg.sh
+   0 0,6,12,18 * * * ~/dowload_upload.sh
    ```
    - `0` specifies the minute (start of the hour).
    - `0,6,12,18` specifies the hours (12 AM, 6 AM, 12 PM, and 6 PM).
@@ -109,15 +110,15 @@ crontab -l
 ```
 You should see the line you added:
 ```bash
-0 0,6,12,18 * * * ~/epg.sh
+0 0,6,12,18 * * * ~/dowload_upload.sh
 ```
 
 ---
 
 ### **6. View Logs**
-The script logs its activity to `/tmp/epg_log.txt`. Check the log for details:
+The script logs its activity to `/tmp/dowload_upload_log.txt`. Check the log for details:
 ```bash
-cat /tmp/epg_log.txt
+cat /tmp/dowload_upload_log.txt
 ```
 
 --- 
